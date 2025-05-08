@@ -46,8 +46,7 @@ function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
 }
 
 const user: User = { name: "MR.Jin", age: 300 };
-const name = getValue(user, "name");  
-console.log(name); 
+console.log(getValue(user, "name")); 
 
 From The example we can see that keyof Operator ensures key safety. It only allows valid key. 
 

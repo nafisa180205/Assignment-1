@@ -1,5 +1,4 @@
 {
-    //
 
     function formatString(input: string, toUpper?: boolean): string{
         
@@ -11,9 +10,6 @@
        }
     }
 
-    formatString("Hello");          
-    formatString("Hello", true);   
-    formatString("Hello", false);
 }
 
 {
@@ -30,7 +26,6 @@
         { title: "Book C", rating: 5.0 }
       ];
       
-      filterByRating(books) 
       
 }
 
@@ -40,8 +35,6 @@
         return concatedArray
     }
 
-    concatenateArrays(["a", "b"], ["c"]);      
-    concatenateArrays([1, 2], [3, 4], [5]); 
 }
 {
     class Vehicle{
@@ -71,8 +64,6 @@
     }
 
     const myCar = new Car("Toyota", 2020, "Corolla");
-    myCar.getInfo();   
-    myCar.getModel(); 
 }
 
 {
@@ -86,8 +77,7 @@
         }
     }
 
-    processValue("hello")
-    processValue(10)
+
 }
 
 {
@@ -112,7 +102,7 @@
         { name: "Bag", price: 50 }
       ];
       
-    getMostExpensiveProduct(products)
+
 }
 
 {
@@ -134,8 +124,7 @@
         return "Weekend"
       }
 
-      getDayType(Day.Monday)
-      getDayType(Day.Sunday)
+
 }
 
 {
@@ -149,7 +138,5 @@
           });
     }
 
-    squareAsync(4).then(console.log)
-    squareAsync(-3).catch(console.error);
 
 }
