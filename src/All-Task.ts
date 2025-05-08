@@ -11,7 +11,9 @@
        }
     }
 
-    console.log(formatString("hEllo",false))
+    formatString("Hello");          
+    formatString("Hello", true);   
+    formatString("Hello", false);
 }
 
 {
@@ -28,34 +30,30 @@
         { title: "Book C", rating: 5.0 }
       ];
       
-      console.log(filterByRating(books)); 
+      filterByRating(books) 
       
 }
 
 {
     function concatenateArrays<T>(...arrays: T[][]): T[]{
-        // const concatedArray = arrays.reduce((firstArray, secondArray) => firstArray.concat(secondArray))
-        //const concatedArray = [...[].concat(...arrays)]
-        const concatedArray = arrays.flat()
+        const concatedArray = arrays.reduce((firstArray, secondArray) => firstArray.concat(secondArray))
         return concatedArray
     }
 
-    console.log(concatenateArrays(["a", "b"], ["c"]))      
-    console.log(concatenateArrays([1, 2], [3, 4], [5])) 
+    concatenateArrays(["a", "b"], ["c"]);      
+    concatenateArrays([1, 2], [3, 4], [5]); 
 }
-
 {
-    //
     class Vehicle{
         private make: string;
-        private year: number;
+        public year: number;
         constructor(make: string, year: number) {
             this.make = make;
             this.year = year;
-          }
+        }
         
-        getInfo(){
-            console.log(`Make: ${this.make}, Year: ${this.year}`)
+        public getInfo(){
+            return (`Make: ${this.make}, Year: ${this.year}`)
         }
     } 
 
@@ -67,8 +65,8 @@
             this.model = model
         }
 
-        getModel(){
-            console.log (`Model: ${this.model}`)
+        public getModel(){
+            return (`Model: ${this.model}`)
         }
     }
 
@@ -88,8 +86,8 @@
         }
     }
 
-    console.log(processValue("hello"))
-    console.log(processValue(10))
+    processValue("hello")
+    processValue(10)
 }
 
 {
@@ -114,7 +112,7 @@
         { name: "Bag", price: 50 }
       ];
       
-    console.log(getMostExpensiveProduct(products));  
+    getMostExpensiveProduct(products)
 }
 
 {
@@ -129,15 +127,15 @@
       }
       
       function getDayType(day: Day): string {
-        if (day === Day.Monday || day === Day.Tuesday || day === Day.Wednesday || day === Day.        Thursday  || day === Day.Friday) {
+        if (day === Day.Monday || day === Day.Tuesday || day === Day.Wednesday || day === Day.Thursday  || day === Day.Friday) {
           return "Weekday";
         } 
 
         return "Weekend"
       }
 
-      console.log(getDayType(Day.Monday))
-      console.log(getDayType(Day.Sunday))
+      getDayType(Day.Monday)
+      getDayType(Day.Sunday)
 }
 
 {
